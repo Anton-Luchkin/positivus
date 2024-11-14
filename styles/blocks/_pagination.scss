@@ -1,0 +1,26 @@
+@use '../main' as *;
+
+.pagination {
+
+	&__list {
+		display: flex;
+	}
+
+	&__button {
+		@include reset-button;
+		@include flex-center;
+		@include square(22px);
+
+		color: var(--color-light);
+
+		@include hover {
+			color: var(--color-accent);
+		}
+
+		&.is-current {
+			color: var(--color-accent);
+		}
+	}
+	justify-content: center;
+	column-gap: 19px;
+}
